@@ -1,0 +1,819 @@
+
+
+{% extends "crm_app/base.html" %}
+{% load staticfiles %}
+
+<head xmlns="http://www.w3.org/1999/html">
+
+
+    <link href="{%  static "crm_app/css/common.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
+
+    <link href="{%  static "crm_app/css/demo.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
+
+    <link href="{%  static "crm_app/css/media-hover-effects.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
+
+
+    <style>
+        a.tooltip {
+            outline: none;
+        }
+
+        a.tooltip strong {
+            line-height: 30px;
+        }
+
+        a.tooltip:hover {
+            text-decoration: none;
+        }
+
+        a.tooltip span {
+            z-index: 10;
+            display: none;
+            padding: 14px 20px;
+            margin-top: 60px;
+            margin-left: -160px;
+            width: 300px;
+            line-height: 16px;
+        }
+
+        a.tooltip:hover span {
+            display: inline;
+            position: absolute;
+            border: 2px solid #FFF;
+            color: #EEE;
+            background: black;
+        }
+
+        .callout {
+            z-index: 20;
+            position: absolute;
+            border: 0;
+            top: -14px;
+            left: 120px;
+        }
+
+        /*CSS3 extras*/
+        a.tooltip span {
+            border-radius: 2px;
+            box-shadow: 0px 0px 8px 4px #666;
+            /*opacity: 0.8;*/
+        }
+{#main {#}
+{#            background-image: url("{% static "crm_app/images/CAEnggTeam/galaxy_hd.jpg " %}");#}
+{#            background-repeat: no-repeat;#}
+{#    background-image: url("{% static "crm_app/images/sl2.jpg"%}");#}
+{#}#}
+
+img:hover{
+    width: 16%;
+}
+    p {
+        color: white;
+        font-size: medium;
+{#        background-color: #808080;#}
+    }
+
+{##}
+{#        .kd{#}
+{##}
+{#            background-image: url("{% static "crm_app/images/CAEnggTeam/galaxy_hd.jpg " %}");#}
+{#            background-repeat: no-repeat;#}
+{##}
+{#        }#}
+
+
+body{
+    background-image: url("{% static 'crm_app/images/CAEnggTeam/galaxy_hd.jpg' %}");
+
+
+}
+    </style>
+
+</head>
+
+{% block main %}
+<body>
+{##}
+{#    <div class="container">#}
+{#    <div class="section">#}
+{##}
+{#    <div class="row">#}
+{#               <h4 class="col s12">Sarah</h4>#}
+{#               <div class="col s12 m6 grid">#}
+{#                 <figure class="effect-sarah">#}
+{#                   <img src="{% static 'crm_app/images/avatar.jpg' %}" alt="img13"/>#}
+{#                   <figcaption>#}
+{#                     <h2>Free <span>Sarah</span></h2>#}
+{#                     <p>Sarah likes to watch clouds. She's quite depressed.</p>#}
+{#                     <a href="#">View more</a>#}
+{#                   </figcaption>#}
+{#                 </figure>#}
+{#               </div>#}
+{#               <div class="col s12 m6 grid">#}
+{#                 <figure class="effect-sarah">#}
+{#                   <img src="{% static 'crm_app/images/analysis.jpg' %}" alt="img20"/>#}
+{#                   <figcaption>#}
+{#                     <h2>Free <span>Sarah</span></h2>#}
+{#                     <p>Sarah likes to watch clouds. She's quite depressed.</p>#}
+{#                     <a href="#">View more</a>#}
+{#                   </figcaption>#}
+{#                 </figure>#}
+{#               </div>#}
+{#    </div>#}
+{#    </div>#}
+{#    #}
+{#    </div>#}
+{#<body style="background-image:url("{% static 'crm_app/images/CAEnggTeam/galaxy_hd.jpg' %}");background: no-repeat">#}
+    <!-- Floating Action Button -->
+                   <div class="fixed-action-btn" style="top: 90px; right: 15px;">
+                       <a class="btn-floating btn-large red">
+                         <i class="large mdi-action-language"></i>
+                       </a>
+                       <ul>
+                       <li><a href="/ca_engg/live_projects/" class="btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="LIVE PROJECTS"><i class="large mdi-editor-insert-invitation"></i></a></li>
+                           <li><a href="/ca_engg/stories/" class="btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="SUCCESS STORIES"><i class="large mdi-hardware-security"></i></a></li>
+                         <li><a href="/ca_engg/training/" class="btn-floating orange tooltipped" data-position="left" data-delay="50" data-tooltip="TRAINING"><i class="large mdi-hardware-laptop-chromebook"></i></a></li>
+                           <li><a href="/ca_engg/our_niche/" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="OUR NICHE"><i class="large mdi-image-center-focus-strong"></i></a></li>
+                           <li><a href="/ca_engg/gallery/" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="GALLERY"><i class="large mdi-image-collections"></i></a></li>
+<li><a href="/ca_engg/careers/" class="btn-floating pink tooltipped" data-position="left" data-delay="50" data-tooltip="CAREER"><i class="large mdi-social-person-outline"></i></a></li>
+       <li><a href="http://www.consultadd.com" target="_blank" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="ABOUT US"><i class="large mdi-action-account-balance-wallet"></i></a></li>
+                       </ul>
+                   </div>
+                   <!-- Floating Action Button -->
+
+
+<div class="kd" style="margin-top: 30px">
+{#    ----------------------------------------------------slide cards--------------------------------------------#}
+<a class="modal-trigger" href="#modal2"><img style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/chirag.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue;height: 400px" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/chirag.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color: white"><strong>Chirag Agarwal</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Web Developer	</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> +918602587120, +1­201­526­3683	</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i>chirag.agrawal@consultadd.in</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i>Skills: Ruby On Rails	</p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i>Other Interests: Databases</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO:</a>
+    </div>
+  </div>
+{#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+<a class="modal-trigger" href="#modal1"><img style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/kunjan.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/kunjan.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color: white"><strong>Kunjan Dhoble</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Web Developer	</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>8357867022, 1­201­526­3691		</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i>kunjan.dhoble@consultadd.in	</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i>Skills: Programming Skills: C++, Python, HTML5, CSS3, JS, D3js. Frameworks: Django, Flask. Web Scrapping.	</p>
+                                                                                <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i>Other Interests: Reading Novels, Playing Sports, Watching Movies.	</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><b>MOTTO: Learn =>Apply =>Enjoy</b></a>
+    </div>
+  </div>
+
+
+   {#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+
+
+    <a class="modal-trigger" href="#modal3"><img style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/yogita.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal3" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/yogita.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size:xx-large;color:#ffffff"><strong>Yogita Shukla</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Web Developer	</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> 7741952667		</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i>yogita.shukla@consultadd.in	</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i>Skills:Python , Networking , Scripting , Sql	</p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i>Other Interests: Singing , Dancing.		</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO:</a>
+    </div>
+  </div>
+
+
+    {#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+
+
+<a class="modal-trigger" href="#modal4"><img style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/harshal1.JPG" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal4" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/harshal1.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color:#ffffff"><strong>Harshal Nenava	</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Functional Analyst		</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> 8888813612	</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i>harshal.nenava@consultadd.com	</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i>Skills: Kronos, SalesForce, DBMS		</p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i>Other Interests: Buying new gadgets	</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO:</a>
+    </div>
+  </div>
+
+    {#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+
+
+    <a class="modal-trigger" href="#modal5"><img style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/radha.JPG" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal5" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/radha.JPG" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color: white"><strong>Radha Shah</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i>Data Analyst	</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i>91 9689527705 ,(201) - 5263704 </p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i>radha.shaha@consultadd.in	</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i>Skills:Data Modeling, SQl, T-SQL, Concepts of - DWH, ETL, Data Analysis, Data Profiling Tools:- SQL SERVER 2014, CA ERwin, Excel, Basics of Informatica Data Quality (IDQ) - Data Quality rules, Basics of TOAD - SQL editor	</p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i>Other Interests: Soft Music, Swimming	</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+
+
+
+
+        <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO:</a>
+    </div>
+  </div>
+
+
+
+            {#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+
+
+    <a class="modal-trigger" href="#modal6"><img id="hoverimg" style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/suhas.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal6" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/suhas.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color: white"><strong>Suhas Jadhav</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Web Developer	</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> +918390619600	</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> suhas.jadhav@consultadd.in</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i> Skills: Python Programming, Flask and Django framework, Mysqldb-Python, ssh/Paramiko, Javascript, Angularjs, D3js, other web technologies </p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i> Other Interests: Painting, Sports[cricket,football & Badminton]</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO: To reduce RISK: "TAKE RI$K"</a>
+    </div>
+  </div>
+
+
+            {#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+
+
+    <a class="modal-trigger" href="#modal7"><img id="hoverimg" style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/navsaumya.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal7" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/navsaumya.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color: white"><strong>Navsaumya Tyagi</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Business Analyst		</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> 9890042916	</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> navsaumya.tyagi@consultadd.in	</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i> Skills: sql, java, technofunctional,ROR	 </p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i> Other Interests: travelling to new places,creativity	</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO: </a>
+    </div>
+  </div>
+ {#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+
+
+    <a class="modal-trigger" href="#modal8"><img id="hoverimg" style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/Lokesh Jadon.JPG" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal8" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/Lokesh Jadon.JPG" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color: white"><strong>Lokesh Singh Jadon	</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Business Analyst		</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> (205) 575-2366		</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> Lokesh.Jadon@consultadd.com		</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i> Skills: Business Analyst,SQL,Visio,Database,Datawarehouse	</p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i> Other Interests: Python and ETL		</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO: </a>
+    </div>
+  </div>
+
+    {#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+
+
+    <a class="modal-trigger" href="#modal9"><img id="hoverimg" style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/Surbhi_Jain.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal9" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/Surbhi_Jain.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color: white"><strong>Surbhi Jain		</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Web Developer		</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> 8446714009, 5512267952		</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> surbhi.jain@consultadd.in			</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i> Skills: Python, Java, JavaScript, MySQL		</p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i> Other Interests: Arts, Reading, Music, Painting		</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO: </a>
+    </div>
+  </div>
+
+      {#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+
+
+    <a class="modal-trigger" href="#modal10"><img id="hoverimg" style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/swapnil.JPG" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal10" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/swapnil.JPG" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color: white"><strong>Swapnil Bhosale			</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Web Developer		</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> +919765207580			</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> swapnil.bhosale@consultadd.com</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i> Skills: Html,CSS,Javascript,ROR	</p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i> Other Interests: Singing,Treking,Swimming	</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO: </a>
+    </div>
+  </div>
+
+
+
+     {#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+
+
+    <a class="modal-trigger" href="#modal11"><img id="hoverimg" style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/richa.JPG" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal11" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/richa.JPG" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color: white"><strong>Richa Parsai				</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Functional Analyst	</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> 9130006025,2015263684			</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> richa.parsai@consultadd.com	</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i> Skills: Kronos, Oracle EBS, Peoplesoft.		</p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i> Other Interests:BA</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO: </a>
+    </div>
+  </div>
+
+
+
+
+     {#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+
+
+    <a class="modal-trigger" href="#modal12"><img id="hoverimg" style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/akshar.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal12" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/akshar.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color: white"><strong>Akshar Singh Sisodia					</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Data Analyst	</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> 9098475993, +12014489695			</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> akshar.sisodia@consultadd.com		</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i> Skills: Database, SQL, BI Tools, ETL Tools.			</p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i> Other Interests:BA and iPhone development	</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO: </a>
+    </div>
+  </div>
+
+      {#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+
+
+    <a class="modal-trigger" href="#modal13"><img id="hoverimg" style="width: 14%;top: 07px;margin: 0px 15px;border: 2px #808080" src="{%  static "crm_app/images/CAEnggTeam/sagar.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal13" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/sagar.jpg" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color: white"><strong>Sagar Khangan	</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Web Developer	</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> 8888873729,2015253903	</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> sagar.khangan@consultadd.in			</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i> Skills:Web development , Business Analysis , ETL , Analytics, CRM , ERP				</p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i> Other Interests: *****	</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO: </a>
+    </div>
+  </div>
+
+
+          {#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx#}
+
+
+
+    <a class="modal-trigger" href="#modal14"><img id="hoverimg" style="width: 14%;top: 07px;margin: 0px 15px;border: 2px #808080" src="{%  static "crm_app/images/CAEnggTeam/pratiksha.JPG" %}" alt="" class="circle responsive-img activator card-profile-image">
+</a>
+
+  <!-- Modal Structure -->
+  <div id="modal14" class="modal" style="opacity: 0.8;background-color: black">
+    <div style="border: 3px solid blue" class="modal-content">
+{#      <h4>Modal Header</h4>#}
+{#      <div class="row">#}
+{#                            <div class="col s12 m12">#}
+{##}
+{#    <div class="card">#}
+{#                                    <div class="card-image waves-effect waves-block waves-light">#}
+{#                                        <img src="{%  static "crm_app/images/office.jpg"%}" alt="user background">#}
+{#                                    </div>#}
+{#                                    <div class="card-content">#}
+        <div class="row">
+            <div style="background-color: transparent"class="col s12 m4">
+                                        <img style="width: 100%;top: 07px" src="{%  static "crm_app/images/CAEnggTeam/pratiksha.JPG" %}" alt="" class="circle responsive-img activator card-profile-image">
+
+            </div>
+            <div class="col s12 m8">
+                            <h2 style="font-size: xx-large;color: white"><strong>Pratiksha Gandhi	</strong></h2>
+                <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Functional Analyst	</p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> 9923336237,2015263706	</p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> pratiksha.gandhi@consultadd.in			</p>
+                                        <p><i class="mdi-action-stars cyan-text text-darken-2"></i> Skills:Functional/Business/Data Analysis, PeopleSoft, Kronos basics, SQL and Data Migration basics, QC and Testing basicsWeb development , Business Analysis , ETL , Analytics, CRM , ERP				</p>
+                                        <p><i class="mdi-av-queue-music cyan-text text-darken-2"></i> Other Interests:  Gaming, Reading, Singing, Dancing	</p>
+
+            </div>
+{#                                    </div>#}
+{#                                    </div>#}
+                                </div>
+    </div>
+{#</div>#}
+
+{#</div>#}
+{#    </div>#}
+    <div class="modal-footer">
+      <a style="background-color: #0544d3;color: white" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">MOTTO: </a>
+    </div>
+  </div>
+{#    -------------------------------------------------------end slider------------------------------------------------#}
+{#################################################### new design ##################################################}{#<body>#}
+
+{#    -------------------------------------------------------end slider------------------------------------------------#}
+{#################################################### new design ##################################################}{#<body>#}
+</div>
+{#    <img style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/chirag.jpg"%}" alt="" class="circle responsive-img activator card-profile-image">#}
+{#    <img style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/chirag.jpg"%}" alt="" class="circle responsive-img activator card-profile-image">#}
+{#    <img style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/chirag.jpg"%}" alt="" class="circle responsive-img activator card-profile-image">#}
+{#    <img style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/chirag.jpg"%}" alt="" class="circle responsive-img activator card-profile-image">#}
+{#    <img style="width: 14%;top: 07px;margin: 0px 15px" src="{%  static "crm_app/images/CAEnggTeam/chirag.jpg"%}" alt="" class="circle responsive-img activator card-profile-image">#}
+
+{####################################################### end design ###############################################}
+
+
+
+
+
+
+{% endblock %}
+
+
+</body>

@@ -1,0 +1,396 @@
+{% extends "crm_app/base.html" %}
+{% load staticfiles %}
+
+
+{% block main %}
+ <style type="text/css">
+            @page {
+                size: {{ pagesize }};
+                margin: 1cm;
+                @frame footer {
+                    -pdf-frame-content: footerContent;
+                    bottom: 0cm;
+                    margin-left: 9cm;
+                    margin-right: 9cm;
+                    height: 1cm;
+                }
+            }
+
+            .card .card-content{
+
+                overflow: auto;
+
+            }
+        </style>
+
+
+
+{#<a style="width: 10px" href="/ca_engg/live_pdf/" class="waves-effect waves-light btn tooltipped" data-position="left" data-delay="50" data-tooltip="DOWNLOAD"><i style="font-size: 30px" class=" mdi-action-system-update-tv left"></i></a>#}
+  <br> <a href="/ca_engg/training_pdf/"><i style="font-size: 30px"  class="mdi-action-system-update-tv left tooltipped " data-position="right" data-delay="50" data-tooltip="DOWNLOAD" ></i></a>
+
+    <body>
+
+
+        <!-- Floating Action Button -->
+                   <div class="fixed-action-btn" style="top: 90px; right: 15px;">
+                       <a class="btn-floating btn-large red">
+                         <i class="large mdi-action-language"></i>
+                       </a>
+                       <ul>
+                           <li><a href="/ca_engg/team/" class="btn-floating pink tooltipped" data-position="left" data-delay="50" data-tooltip="TEAM"><i class="large mdi-social-group"></i></a></li>
+                           <li><a href="/ca_engg/stories/" class="btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="SUCCESS STORIES"><i class="large mdi-hardware-security"></i></a></li>
+   <li><a href="/ca_engg/gallery/" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="GALLERY"><i class="large mdi-image-collections"></i></a></li>
+                          <li><a href="/ca_engg/our_niche/" class="btn-floating pink tooltipped" data-position="left" data-delay="50" data-tooltip="OUR NICHE"><i class="large mdi-image-center-focus-strong"></i></a></li>
+                         <li><a href="/ca_engg/live_projects/" class="btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="LIVE PROJECTS"><i class="large mdi-editor-insert-invitation"></i></a></li>
+                                     <li><a href="/ca_engg/careers/" class="btn-floating pink tooltipped" data-position="left" data-delay="50" data-tooltip="CAREER"><i class="large mdi-social-person-outline"></i></a></li>
+       <li><a href="http://www.consultadd.com" target="_blank" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="ABOUT US"><i class="large mdi-action-account-balance-wallet"></i></a></li>
+                       </ul>
+                   </div>
+                   <!-- Floating Action Button -->
+
+
+
+ <div class="row">
+        <div class="col s12 m12">
+          <div class="card red lighten-2">
+            <div class="card-content white-text">
+
+
+
+    {#  ------------------------------------------------------my test env----------------------------------------------------#}
+    <ul class="chat-collapsible" data-collapsible="expandable">
+
+        <li>
+            <div  class="collapsible-header white black-text active"><strong>ONGOING TRAINING DETAILS</strong><i style="font-size: 2.6rem"class=" material-icons">play_for_work</i></div>
+            <div class="collapsible-body sales-repoart">
+                <div class="sales-repoart-list  chat-out-list row">
+                    <div class="row">
+                        <div style="background-color: white" class="col s12 m12">
+                            <div class="card black darken-1">
+                                <div class="card-content white-text">
+{#                                    <span class="card-title">Card Title</span>#}
+                                    <table style="width:100%; overflow: auto">
+
+{#                                        <tr><br> Ongoing Training Details</tr>#}
+
+
+{#                                        <tr>#}
+                                            {% for i in col %}
+
+                                                <th align="right">
+
+                                                    {{ i }}
+                                                </th>
+
+                                            {% endfor %}
+                                        </tr>
+                                        {% for ii in completed %}
+                                            <tr>
+                                                {% for jj in ii %}
+
+                                                    {% if jj == "" %}
+                                                        <td>
+                                                            ---RECORD NA---
+                                                        </td>
+                                                    {% else %}
+                                                        <td>
+                                                            {{ jj }}
+
+                                                        </td>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </tr>
+
+                                        {% endfor %}
+
+                                    </table>
+
+
+                                </div>
+                                {#            <div class="card-action">#}
+                                {#              <a href="#">This is a link</a>#}
+                                {#              <a href="#">This is a link</a>#}
+                                {#            </div>#}
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </li>
+    <li>
+            <div class="collapsible-header white black-text "><i style="font-size: 2.6rem"class=" material-icons">play_for_work</i><strong>
+                <thead> UPCOMING TRAINING DETAILS</thead>
+            </strong></div>
+            <div class="collapsible-body recent-activity">
+                <div class="recent-activity-list chat-out-list row">
+                    <div class="col s3 recent-activity-list-icon">
+                    </div>
+                    {#                    <div class="col s9 recent-activity-list-text">#}
+                    <div class="row">
+                        <div style="background-color: white" class="col s12 m12">
+                            <div class="card black darken-1">
+                                <div class="card-content white-text">
+{#                                    <span class="card-title">Card Title</span>#}
+                                    <table style="width:100%; overflow: auto">
+
+{#                                        <strong>#}
+{#                                            <thead> UPCOMING TRAINING DETAILS</thead>#}
+{#                                        </strong>#}
+                                        {% if l == 0 %}
+                                            <tr>
+                                                <strong>WILL BE UPDATED SOON.
+                                                    <br>
+                                                    <t> -Thanks,</t>
+                                                    <br>
+                                                    <t>
+                                                        <t>Nivya Agrawal</t>
+                                                    </t>
+                                                </strong>
+
+                                            </tr>
+
+                                        {% else %}
+
+
+                                            <tr>
+                                                {% for i in col %}
+
+                                                    <th>
+
+                                                        {{ i }}
+                                                    </th>
+
+                                                {% endfor %}
+                                            </tr>
+                                            <tr>
+
+                                                {% for i in upcoming %}
+
+                                                    <th>
+
+                                                        {{ i }}
+
+                                                    </th>
+
+                                                {% endfor %}
+
+
+                                            </tr>
+                                        {% endif %}
+
+                                    </table>
+                                </div>
+                                {#                                    <div class="card-action">#}
+                                {#                                        <a href="#">This is a link</a>#}
+                                {#                                        <a href="#">This is a link</a>#}
+                                {#                                    </div>#}
+                            </div>
+                        </div>
+                    </div>
+
+                    {#                    </div>#}
+                </div>
+              </div>
+
+        </li>
+        <li>
+            <div class="collapsible-header white black-text"><i style="font-size: 2.6rem"class=" material-icons">play_for_work</i><strong>
+                                            <thead>ATTENDANCE SHEET of Trainees</thead>
+                                        </strong>
+</div>
+            <div class="collapsible-body sales-repoart">
+                <div class="sales-repoart-list  chat-out-list row">
+                    <div class="row">
+                        <div style="background-color: white" class="col s12 m12">
+                            <div class="card black ">
+                                <div class="card-content white-text">
+{#                                    <span class="card-title">Card Title</span>#}
+                                    <table style="width:100%; ; overflow: auto">
+
+
+{#                                        <strong>#}
+{#                                            <thead>ATTENDANCE SHEET of Trainees</thead>#}
+{#                                        </strong>#}
+
+
+                                        <tr>
+
+                                            {% for i in atnd_col %}
+
+                                                <th>{{ i }}</th>
+
+                                            {% endfor %}
+
+
+                                        </tr>
+
+
+                                        {% for j in atnd_table %}
+                                            <tr>
+                                                {% for k in j %}
+                                                    {% if k == "" %}
+                                                        <td>
+                                                            ---RECORD NA---
+                                                        </td>
+                                                    {% else %}
+                                                        <td>
+                                                            {{ k }}
+
+                                                        </td>
+                                                    {% endif %}        {% endfor %}
+                                            </tr>
+                                        {% endfor %}
+                                    </table>
+
+
+                                </div>
+                                {#            <div class="card-action">#}
+                                {#              <a href="#">This is a link</a>#}
+                                {#              <a href="#">This is a link</a>#}
+                                {#            </div>#}
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </li>
+    </ul>
+                        </div>
+
+          </div>
+        </div>
+      </div>
+    {#   -------------------------------------------------------end test---------------------------------------------#}
+
+{##}
+{#    <a href="/"><h4>Home</h4></a>#}
+{#    <table style="width:100%">#}
+{##}
+{#        <strong>#}
+{#            <thead> UPCOMING TRAINING DETAILS</thead>#}
+{#        </strong>#}
+{#        {% if l == 0 %}#}
+{#            <tr>#}
+{#                <strong>WILL BE UPDATED SOON.#}
+{#                    <br>#}
+{#                    <t> -Thanks,</t>#}
+{#                    <br>#}
+{#                    <t>#}
+{#                        <t>Nivya Agrawal</t>#}
+{#                    </t>#}
+{#                </strong>#}
+{##}
+{#            </tr>#}
+{##}
+{#        {% else %}#}
+{##}
+{##}
+{#            <tr>#}
+{#                {% for i in col %}#}
+{##}
+{#                    <th>#}
+{##}
+{#                        {{ i }}#}
+{#                    </th>#}
+{##}
+{#                {% endfor %}#}
+{#            </tr>#}
+{#            <tr>#}
+{##}
+{#                {% for i in upcoming %}#}
+{##}
+{#                    <th>#}
+{##}
+{#                        {{ i }}#}
+{##}
+{#                    </th>#}
+{##}
+{#                {% endfor %}#}
+{##}
+{##}
+{#            </tr>#}
+{#        {% endif %}#}
+{##}
+{#    </table>#}
+{##}
+{#    <table style="width:100%">#}
+{##}
+{#        <tr><br> Ongoing Training Details</tr>#}
+{##}
+{##}
+{#        <tr>#}
+{#            {% for i in col %}#}
+{##}
+{#                <th align="right">#}
+{##}
+{#                    {{ i }}#}
+{#                </th>#}
+{##}
+{#            {% endfor %}#}
+{#        </tr>#}
+{#        {% for ii in completed %}#}
+{#            <tr>#}
+{#                {% for jj in ii %}#}
+{##}
+{#                    {% if jj == "" %}#}
+{#                        <td>#}
+{#                            ---RECORD NA---#}
+{#                        </td>#}
+{#                    {% else %}#}
+{#                        <td>#}
+{#                            {{ jj }}#}
+{##}
+{#                        </td>#}
+{#                    {% endif %}#}
+{#                {% endfor %}#}
+{#            </tr>#}
+{##}
+{#        {% endfor %}#}
+{##}
+{#    </table>#}
+{##}
+{##}
+{#    <table>#}
+{##}
+{##}
+{#        <strong>#}
+{#            <thead>ATTENDANCE SHEET of Trainees</thead>#}
+{#        </strong>#}
+{##}
+{##}
+{#        <tr>#}
+{##}
+{#            {% for i in atnd_col %}#}
+{##}
+{#                <th>{{ i }}</th>#}
+{##}
+{#            {% endfor %}#}
+{##}
+{##}
+{#        </tr>#}
+{##}
+{##}
+{#        {% for j in atnd_table %}#}
+{#            <tr>#}
+{#                {% for k in j %}#}
+{#                    {% if k == "" %}#}
+{#                        <td>#}
+{#                            ---RECORD NA---#}
+{#                        </td>#}
+{#                    {% else %}#}
+{#                        <td>#}
+{#                            {{ k }}#}
+{##}
+{#                        </td>#}
+{#                    {% endif %}        {% endfor %}#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#    </table>#}
+
+
+    </body>
+{% endblock %}

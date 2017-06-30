@@ -1,0 +1,510 @@
+{% extends "crm_app/base.html" %}
+{% load staticfiles %}
+{#<html>#}
+{#<head lang="en">#}
+{#    <meta charset="UTF-8">#}
+{#    <title>LOGOUT</title>#}
+{##}
+{#    <link rel="stylesheet" href="{% static 'shwekd/css/materialize.css' %}">#}
+{##}
+{#    <link rel="stylesheet" href="{% static 'shwekd/css/materialize.min.css' %}">#}
+{##}
+{##}
+{#    <link rel="stylesheet" href="{% static 'shwekd/js/materialize.min.js' %}">#}
+{##}
+{#    <link rel="stylesheet" href="{% static 'shwekd/js/materialize.js' %}">#}
+{#</head>#}
+{% block main %}
+
+    <style>
+        .kd-hover {
+
+            text-align: center;
+
+        }
+
+        .kd-hover:hover {
+
+        {#        text-align: bottom;#} color: white;
+            font-size: x-large;
+            font-family: Verdana;
+            border: 2px solid ghostwhite;
+
+        }
+
+
+    </style>
+    <style>
+        .abc {
+            list-style-type: '&#187';
+        }
+
+{##}
+{#    .name{#}
+{#    display: inline-block;#}
+{#    position: relative;#}
+{#        }#}
+{##}
+{##}
+{#    .name:hover:after{#}
+{#    background: #333;#}
+{#    background: rgba(0,0,0,.8);#}
+{#    border-radius: 5px;#}
+{#    bottom: 26px;#}
+{#    color: navajowhite;#}
+{#        visibility: visible;#}
+{#    content: "ABOUT";#}
+{#    left: 20%;#}
+{#    padding: 5px 15px;#}
+{#    position: absolute;#}
+{#    margin-right: 20px;#}
+{#    z-index: 98;#}
+{#    width: 50px;#}
+{#}#}
+{##}
+{##}
+{#    .name:hover:before{#}
+{#    border: solid;#}
+{#    border-color: #333 transparent;#}
+{#    border-width: 6px 6px 0 6px;#}
+{#    bottom: 20px;#}
+{#    content: "";#}
+{#    left: 50%;#}
+{#    position: absolute;#}
+{#    z-index: 99;#}
+{#}#}
+
+    .name {
+   position: relative;
+   display: inline-block;
+   border-bottom: 1px dotted black;
+}
+
+.name .tooltiptext {
+   visibility: hidden;
+   width: 120px;
+   background-color: black;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+}
+
+.name:hover .tooltiptext {
+   visibility: visible;
+}
+
+
+    </style>
+
+
+    {#ul {#}
+    {#  list-style: none;#}
+    {#  margin-left: 0;#}
+    {#  padding-left: 0;#}
+    {# } #}
+    {##}
+    {#li {#}
+    {#  padding-left: 1em;#}
+    {#  text-indent: -1em;#}
+    {# } #}
+    {##}
+    {#li:before {#}
+    {#  content: "+";#}
+    {#  padding-right: 5px;#}
+    {# } #}
+
+
+
+
+    <body>
+    <script>
+        var k =1;
+         function codeAddress() {
+            var elem=document.getElementsByClassName("btn-floating");
+             elem.style.width=100;
+             elem.style.height=80;
+             delay(1000);
+             elem.style.width=50;
+             elem.style.height=40;
+
+        }
+
+        window.onload=codeAddress();
+{#        window.onload=loop_end()#}
+{#        {#}
+{#        while(k==1){#}
+{##}
+{#            codeAddress();#}
+{#        }#}
+{#        };#}
+
+
+    </script>
+    {#    <div class="card-small">#}
+    {#<div class="con"#}
+    <br>
+    <br>
+
+    <!-- Modal Trigger -->
+    <!-- Floating Action Button -->
+                   <div class="fixed-action-btn" style="top: 90px; right: 15px;">
+                       <a class="btn-floating btn-large red">
+                         <i class="large mdi-action-language"></i>
+                       </a>
+                       <ul>
+                           <li><a href="/ca_engg/team/" class="btn-floating pink tooltipped" data-position="left" data-delay="50" data-tooltip="TEAM"><i class="large mdi-social-group"></i></a></li>
+                           <li><a href="/ca_engg/stories/" class="btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="SUCCESS STORIES"><i class="large mdi-hardware-security"></i></a></li>
+                         <li><a href="/ca_engg/training/" class="btn-floating orange tooltipped" data-position="left" data-delay="50" data-tooltip="TRAINING"><i class="large mdi-hardware-laptop-chromebook"></i></a></li>
+                           <li><a href="/ca_engg/gallery/" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="GALLERY"><i class="large mdi-image-collections"></i></a></li>
+                         <li><a href="/ca_engg/live_projects/" class="btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="LIVE PROJECTS"><i class="large mdi-editor-insert-invitation"></i></a></li>
+                                     <li><a href="/ca_engg/careers/" class="btn-floating pink tooltipped" data-position="left" data-delay="50" data-tooltip="CAREER"><i class="large mdi-social-person-outline"></i></a></li>
+       <li><a href="http://www.consultadd.com" target="_blank" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="ABOUT US"><i class="large mdi-action-account-balance-wallet"></i></a></li>
+                       </ul>
+                   </div>
+                   <!-- Floating Action Button -->
+
+    <h4 style="margin-left: 400px; color: white"><i><strong>Our Niche</strong></i></h4>
+
+
+    <ul style="margin-left: 450px">
+
+        <li><i class="material-icons" style="color: white">description</i><a style="width: 300px; height: 300px" class="modal-trigger waves-effect waves-light btn" href="#BA">BUSINESS
+            ANALYST</a></li>
+        <br>
+        <li><i class="material-icons" style="color: white">description</i><a class="modal-trigger waves-effect waves-light btn" href="#DA">DATA
+            ANALYST</a></li>
+        <br>
+        <li><i class="material-icons" style="color: white">description</i><a class="modal-trigger waves-effect waves-light btn" href="#FA">FUNCTIONAL
+            ANALYST</a></li>
+        <br>
+        <li><i class="material-icons" style="color: white">description</i><a class="modal-trigger waves-effect waves-light btn" href="#web">WEB
+            DEVELOPER</a></li>
+        <br>
+
+    </ul>
+    <!-- Modal Structure -->
+    <div id="BA" class="modal modal-fixed-footer">
+        <div class="modal-content" style="background-color:navajowhite">
+            <h4 style="color: teal;font-family: Baskerville;margin-left: 180px">BUSINESS ANALYST</h4><br>
+
+            <p style="color: black">A business analyst is someone who analyzes business domain and documents organization’s
+                business, processes or systems, assessing the business model or its integration with technology.</p>
+            <b style="color: black">Our Expertise and deliverables</b><br>
+            <p style="color: black">Team is very skilled and the typical deliverables are -</p>
+            <ul style="margin-left: 20px ; color: black">
+                <li>➢ Business requirements, i.e. Business plan, Key Performance Indicator, Project plan etc.,</li>
+                <li>➢ SDLC, Agile and scrum methodology</li>
+                <li>➢ Functional requirements, i.e. data models, technical specifications, use case scenarios, work
+                    instructions, reports.
+                </li>
+                <li>➢ Non-functional requirements</li>
+                <li>➢ As-Is processes, i.e. flowcharts</li>
+                <li>➢ To-Be processes, i.e. flowcharts</li>
+                <li>➢ Data models, i.e. data requirements expressed as a documented data model of some sort</li>
+                <li>➢ Business case, a strategic plan containing shareholders’ risk and return</li>
+                <li>➢ Screen Mockups - Wireframes</li>
+                <li>➢ Quality Analysis - UAT preparation, Test plan, Test cases, RTM, Defect tracking.</li>
+
+            </ul>
+
+            <b style="color: black">Tools</b><br>
+            <p style="color: black">Microsoft Visio, Excel, ALM, Wireframe tools (Balsamiq, Axure)</p>
+
+        </div>
+        <div class="modal-header" style="float: right">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat "><i
+                    class="material-icons right">close</i></a>
+        </div>
+        <div class="modal-footer" style="background-color: darkred; opacity: .2;height: 5%">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">CLOSE</a>
+
+        </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="DA" class="modal modal-fixed-footer">
+        <div class="modal-content" style="background-color:navajowhite">
+            <h4 style="color: teal;font-family: Baskerville;margin-left: 180px">DATA ANALYST</h4>
+
+            <p style="color: black">A Data Analyst is the professional whose focus of analysis and problem solving relates to data,
+                types of data, and relationships among data elements within a business system or IT system.<br><br>
+                Other common titles for this role are: ETL developer, Data Modeler, Business Intelligence Analyst,
+                Data Warehouse Analyst, Systems Analyst, Data Scientist etc.</p>
+
+            <b style="color: black">Our Expertise and deliverables -</b><br>
+            <ul style="margin-left: 20px ;color: black">
+                <li>➢ Conceptual, Logical and Physical Data Modeling, Relational and Dimensional Modeling for
+                    Online Transaction Processing (OLTP) and Online Analytical Processing (OLAP) systems. 
+                </li>
+                <li>➢ Writing complex SQL queries</li>
+                <li>➢ Data Werehousing</li>
+                <li>➢ Data Mapping</li>
+                <li>➢ ETL (Extract, Transform and Load) of data into a data warehouse/data mart</li>
+                <li>➢ Basics of Business Intelligence - Data visualization technologies</li>
+
+            </ul>
+            <b style="color: black">Tools</b><br>
+            <ul style="margin-left: 20px ;color: black">
+                <li>● Data Modelling tools –CA ERwin, ER Studio
+                <li>● ETL tools – Informatica, SSIS, Pentaho, Talend</li>
+                <li>● Big Data – Hadoop</li>
+                <li>● Databases - MySQL, SQL Server, Oracle, MS access</li>
+                <li>● BI tools – Tableau, SSRS</li>
+                <li>● Excel and VBA macros</li>
+
+            </ul>
+
+        </div>
+        <div class="modal-header" style="float: right">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat "><i
+                    class="material-icons right">close</i></a>
+        </div>
+        <div class="modal-footer" style="background-color: darkred; opacity: .2;height: 5%">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">CLOSE</a>
+
+        </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="web" class="modal modal-fixed-footer">
+        <div class="modal-content" style="background-color:navajowhite">
+            <h4 style="color: teal;font-family: Baskerville;margin-left: 190px">WEB DEVELOPER</h4>
+
+            <p style="color: black">Tasks successfully undertaken -</p>
+            <ul style="margin-left: 20px;color: black">
+                <li>✓ Developing web applications using web frameworks like Ruby on Rails (ROR),
+                    Angular.js, Django, Twitter bootstrap, Django and Databases like MySQL, Postgres and nosql databases
+                    like MongoDB.
+                </li>
+                <li>✓ Fluent in version control systems like GIT, SVN.</li>
+                <li>✓ RSpec to create behavior driven development for ruby - write application scenarios and test
+                    them.
+                </li>
+                <li>✓ Understanding of Python best Practices (PEP-8).</li>
+            </ul>
+            <b style="color: black">Expertise</b><br>
+            <p style="color: black">Our team is very skilled with below technology -</p>
+
+      <table>
+        <thead>
+          <tr>
+              <th data-field="id">Programming Languages</th>
+              <td data-field="name">Python, Ruby, SQL, pl/sql,NOSQl</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th>Web Technologies</th>
+              <td>JavaScript, Angular.JS,  JQuery, Ajax, Web service API’s</td>
+          </tr>
+          <tr>
+            <th>Web Design</th>
+            <td>HTML, XML, CSS, Bootstrap</td>
+          </tr>
+          <tr>
+            <th>Databases</th>
+            <td>Sqlite3, MongoDB, Oracle, MS SQL, Postgres</td>
+          </tr>
+          <tr>
+            <th>Version Control tools</th>
+            <td>GITHUB, SVN</td>
+          </tr>
+          <tr>
+            <th>Web Frameworks</th>
+            <td>Django, Rails, Flask</td>
+          </tr>
+          <tr>
+            <th>Test Frameworks</th>
+            <td>Nose, Mock, Flake8</td>
+          </tr>
+          <tr>
+            <th>Operating Systems</th>
+            <td>Windows, Windows Server, Linux, Unix, Macintosh, Ubuntu</td>
+          </tr>
+        </tbody>
+      </table>
+        </div>
+        <div class="modal-header" style="float: right">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat "><i
+                    class="material-icons right">close</i></a>
+        </div>
+        <div class="modal-footer" style="background-color: darkred; opacity: .2;height: 5%">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">CLOSE</a>
+
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="FA" class="modal modal-fixed-footer">
+        <div class="modal-content" style="background-color:navajowhite">
+            <h4 style="color: teal;font-family: Baskerville;margin-left: 160px">FUNCTIONAL ANALYST</h4>
+            <ul style="margin-left: 20px;color: black">
+                <li>➢ The role of the functional analyst (FA) is to capture, consolidate, and communicate the
+                    information
+                    from the Subject Matter Experts (SMEs) to the rest of the team.
+                </li>
+                <li>➢ The FA takes the input from the stakeholders and transforms it into something that the development
+                    team can understand.
+                </li>
+                <li>➢ The functional analyst is responsible for ensuring that computer systems remain functional.</li>
+                <li>➢ Functional analysts act as a liaison between the Information Technology department and company management.
+                    Analysts must understand the goals of the employees and adapt the computer systems to these goals.
+                    They update the company's information systems in harmony with its overall business objectives.
+                </li>
+                <li>➢ Functional analysts will look at and review the actual processes within a business.
+                    They can then make or suggest a more efficient model and work flow process.
+                </li>
+            </ul>
+
+            <b style="color: black"> Tools Undertaken -</b>
+            <ul style="color: black">
+                <li>✓ Kronos – Issue and ticket resolving, timekeeping, Workforce Integration Manager, widgets, and
+                    labor level -entries, pay-codes and pay rule or work rules, WIM.</li>
+                <li>✓ Documentation of functional requirements.</li>
+
+            </ul>
+
+
+        </div>
+        <div class="modal-header" style="float: right">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat "><i
+                    class="material-icons right">close</i></a>
+        </div>
+        <div class="modal-footer" style="background-color: darkred; opacity: .2;height: 5%">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">CLOSE</a>
+
+        </div>
+    </div>
+
+
+    {##}
+    {##}
+    {##}
+    {#<div class="row">#}
+    {#    <div class="col s12 m6">#}
+    {#<div  style="width: 600px;height: 300px"  class="card">#}
+    {#    <div class="card-image waves-effect waves-block waves-light">#}
+    {#      <img class="activator" img src="{% static "crm_app/images/business-analyst-trainings.png" %}" >#}
+    {#    </div>#}
+    {#    <div class="card-content">#}
+    {#      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>#}
+    {#      <p><a href="#">This is a link</a></p>#}
+    {#    </div>#}
+    {#    <div class="card-reveal">#}
+    {#      <span class="card-title grey-text text-darken-4"><strong>Business Analyst</strong><i class="material-icons right">close</i></span>#}
+    {#      <p>Here is some more information about this product that is only revealed once clicked on.</p>#}
+    {#    </div>#}
+    {#  </div>#}
+    {#        </div>#}
+    {#        <div class="col s12 m6">#}
+    {##}
+    {#<div  style="width: 600px;height: 300px"class="card">#}
+    {#    <div class="card-image waves-effect waves-block waves-light">#}
+    {#      <img class="activator" img src="{% static "crm_app/images/webdevelopment.jpg" %}" >#}
+    {#    </div>#}
+    {#    <div class="card-content">#}
+    {#      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>#}
+    {#      <p><a href="#">This is a link</a></p>#}
+    {#    </div>#}
+    {#    <div class="card-reveal">#}
+    {#      <span class="card-title grey-text text-darken-4"><strong>Web Developer</strong><i class="material-icons right">close</i></span>#}
+    {#      <p>Here is some more information about this product that is only revealed once clicked on.</p>#}
+    {#    </div>#}
+    {#  </div>#}
+    {#</div>#}
+    {#    </div>#}
+    {#    <div class="row">#}
+    {##}
+    {#    <div class="col s12 m6">#}
+    {#        <div  style="width: 600px;height: 300px"  class="card">#}
+    {#    <div class="card-image waves-effect waves-block waves-light">#}
+    {#      <img class="activator" img src="{% static "crm_app/images/business-analyst-trainings.png" %}" >#}
+    {#    </div>#}
+    {#    <div class="card-content">#}
+    {#      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>#}
+    {#      <p><a href="#">This is a link</a></p>#}
+    {#    </div>#}
+    {#    <div class="card-reveal">#}
+    {#      <span class="card-title grey-text text-darken-4"><strong>DATA Analyst</strong><i class="material-icons right">close</i></span>#}
+    {#      <p>Here is some more information about this product that is only revealed once clicked on.</p>#}
+    {#    </div>#}
+    {#  </div>#}
+    {#</div>#}
+    {#    <div class="col s12 m6">#}
+    {#<div  style="width: 600px;height: 300px"class="card">#}
+    {#    <div class="card-image waves-effect waves-block waves-light">#}
+    {#      <img class="activator" img src="{% static "crm_app/images/webdevelopment.jpg" %}" >#}
+    {#    </div>#}
+    {#    <div class="card-content">#}
+    {#      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>#}
+    {#      <p><a href="#">This is a link</a></p>#}
+    {#    </div>#}
+    {#    <div class="card-reveal">#}
+    {#      <span class="card-title grey-text text-darken-4"><strong>Funtional Analyst</strong><i class="material-icons right">close</i></span>#}
+    {#      <p>Here is some more information about this product that is only revealed once clicked on.</p>#}
+    {#    </div>#}
+    {#  </div>#}
+    {#        </div>#}
+    {#</div>#}
+    {##}
+    {##}
+    {##}
+    {#    <div id="card-stats">#}
+    {#        <div class="row">#}
+    {#            <div class="col s12 m6 l3">#}
+    {#                <div class="card-image">#}
+    {#                    <img src="{% static "crm_app/images/business_analyst.png" %}" width="320px" height="260px">#}
+    {#                    <span class="card-title">Card Title</span>#}
+    {##}
+    {#                    <div class="card-action  green darken-2">#}
+    {#                        <div class="kd-hover"><strong>BUSINESS ANALYST</strong></div>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#            <div class="col s12 m6 l3">#}
+    {#                <div class="card-image">#}
+    {#                    <img src="{% static "crm_app/images/img5.jpg" %}">#}
+    {#                    <span class="card-title">Card Title</span>#}
+    {##}
+    {#                    <div class="card-action purple darken-2">#}
+    {#                        <div class="kd-hover"><strong>DATA ANALYST</strong></div>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#            <div class="col s12 m6 l3">#}
+    {#                <div class="card-image">#}
+    {#                    <img src="{% static "crm_app/images/img5.jpg" %}">#}
+    {#                    <span class="card-title">Card Title</span>#}
+    {##}
+    {#                    <div class="card-action blue-grey darken-2">#}
+    {#                        <div class="kd-hover"><strong>WEB DEVELOPER</strong></div>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#            <div class="col s12 m6 l3">#}
+    {#                <div class="card-image">#}
+    {#                    <img src="{% static "crm_app/images/img5.jpg" %}">#}
+    {#                    <span class="card-title">Card Title</span>#}
+    {##}
+    {#                    <div class="card-action  pink darken-2">#}
+    {#                        <div class="kd-hover"><strong>FUNCTIONAL ANALYST</strong></div>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {##}
+    {#        </div>#}
+    {#    </div>#}
+    {#    <!--card stats end-->#}
+    {##}
+    {##}
+    {##}
+    {##}
+
+
+    </body>
+{% endblock %}
+{#</html>#}

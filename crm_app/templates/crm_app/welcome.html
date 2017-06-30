@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>WELCOME</title>
+
+    <link rel="stylesheet" href="{% static 'crm_app/css/materialize.css' %}">
+
+    <link rel="stylesheet" href="{% static 'crm_app/css/materialize.min.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'crm_app/js/materialize.min.js' %}">
+
+    <link rel="stylesheet" href="{% static 'crm_app/js/materialize.js' %}">
+
+    <link rel="stylesheet" href="{% static 'crm_app/js/plugins/chartjs/chart.min.js' %}">
+
+</head>
+{#<body style="background:url('{{ STATIC_URL }}crm_app/images/background.png')">#}
+<body style="background-repeat:no-repeat ;background-size: 1370px 700px; "
+      background="{% static "crm_app/images/loader.gif" %}">
+{#<body>#}
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+
+
+
+{#<div class="row">#}
+{#<div style="background-color: transparent;opacity: 0.4" class="col s12 m6 l6">#}
+{#                <div class="card small">#}
+{#                  <div class="card-image">#}
+{#                    <img src="images/sample-1.jpg" alt="sample">#}
+{#                    <span class="card-title"><h1 style="color: red">Con$ult@DD</h1></span>#}
+{#                  </div>#}
+{#                  <div class="card-content">#}
+{#                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>#}
+{#                  </div>#}
+{##}
+{#                </div>#}
+{#              </div>#}
+{#</div>#}
+
+
+{#------------------------------------------------------buttons testing-------------------------------------------------------------------------#}
+
+<div style="margin-top: 120px" class="row">
+    <div class="col s12 m6 l6 center">
+        <p style="float: left;margin-left:350px;border: 1px solid grey;border-radius: 10px"><a href="/ca_engg/our_niche" style="width: 200px" class="btn btn-large waves-effect waves-light transparent darken-4">OUR NICHE</a></p>
+    </div>
+
+    <div class="col s12 m6 l6 center">
+        <p style="float: right;margin-right:350px ;border: 1px solid grey;border-radius: 10px"><a href="/ca_engg/team" style="width: 200px" class="btn btn-large waves-effect waves-light transparent darken-4">TEAM</a></p>
+
+    </div>
+</div>
+<br>
+
+<div class="row">
+
+    <div class="col s12 m6 l6 center">
+        <p style="float: left;margin-left: 150px;border: 1px solid grey;border-radius: 10px"><a href="/ca_engg/live_projects" style="width: 200px"
+                class="btn btn-large waves-effect waves-light transparent darken-4">LIVE PROJECTS</a></p>
+
+    </div>
+    <div class="col s12 m6 l6 center">
+        <p style="float: right;margin-right: 150px;border: 1px solid grey;border-radius: 10px"><a href="/ca_engg/stories" style="width: 200px"
+                class="btn btn-large waves-effect waves-light transparent darken-4">SUCCESS STORIES</a></p>
+
+    </div>
+
+</div>
+{#<h1 style="color: red;text-align: center;background-color: #ffffff;font-family:Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace"><strong>CONSULTADD<br>ENGINEERING</strong></h1>#}
+<br>
+
+<div class="row">
+    <div class="col s12 m6 l6 center">
+        <p style="float: left;margin-left: 150px;border: 1px solid grey;border-radius: 10px"><a href="/ca_engg/training" style="width: 200px"
+                class="btn btn-large waves-effect waves-light transparent darken-4">TRAINING</a></p>
+
+    </div>
+    <div class="col s12 m6 l6 center">
+        <p style="float: right;margin-right: 150px;border: 1px solid grey;border-radius: 10px"><a href="/ca_engg/careers" style="width: 200px"
+                class="btn btn-large waves-effect waves-light transparent darken-4">CAREERS</a></p>
+
+    </div>
+    <br>
+</div>
+<div class="row">
+    <div class="col s12 m6 l6 center">
+        <p style="float: left;margin-left:350px;border: 1px solid grey;border-radius: 10px "><a href="/ca_engg/gallery" style="width: 200px"
+                class="btn btn-large waves-effect waves-light transparent darken-4">GALLERY</a></p>
+        <div>
+{#    <img src="{% static "crm_app/images/support_welcome.png" %}"/>#}
+{##}
+
+
+</div>
+
+    </div>
+    <div class="col s12 m6 l6 center">
+        <p style="float: right;margin-right:350px;border: 1px solid grey;border-radius: 10px "><a href="http://www.consultadd.com" style="width: 200px" target="_blank"
+                class="btn btn-large waves-effect waves-light transparent darken-4">ABOUT US</a></p><br>
+
+
+    </div>
+
+</div>
+
+{#</div>#}
+{#<div style="margin-top: 150px" class="row">#}
+{#                        <div class="col s12 m6 l6 center">#}
+{#                          <p><a class="btn btn-large waves-effect waves-light light-green darken-4">button</a></p><br>#}
+{#                          <p><a class="btn btn-large waves-effect waves-light lime darken-4">button</a></p><br>#}
+{#                          <p><a class="btn btn-large waves-effect waves-light yellow darken-4">button</a></p><br>#}
+{#                          <p><a class="btn btn-large waves-effect waves-light purple darken-4">button</a></p><br>#}
+{##}
+{#                        </div>#}
+{#    #}
+{#                        <div class="col s12 m6 l6 center">#}
+{#                          <p><a class="btn btn-large waves-effect waves-light light-green darken-4">button</a></p><br>#}
+{#                          <p><a class="btn btn-large waves-effect waves-light lime darken-4">button</a></p><br>#}
+{#                          <p><a class="btn btn-large waves-effect waves-light yellow darken-4">button</a></p><br>#}
+{#                          <p><a class="btn btn-large waves-effect waves-light purple darken-4">button</a></p><br>#}
+{##}
+{#                        </div>#}
+{##}
+{#                      </div>#}
+
+</body>
+</html>

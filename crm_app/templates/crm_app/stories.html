@@ -1,0 +1,41 @@
+{% extends "crm_app/base.html" %}
+{% load staticfiles %}
+{#<html>#}
+{#<head lang="en">#}
+{#    <meta charset="UTF-8">#}
+{#    <title>LOGOUT</title>#}
+{##}
+{#    <link rel="stylesheet" href="{% static 'shwekd/css/materialize.css' %}">#}
+{##}
+{#    <link rel="stylesheet" href="{% static 'shwekd/css/materialize.min.css' %}">#}
+{##}
+{##}
+{#    <link rel="stylesheet" href="{% static 'shwekd/js/materialize.min.js' %}">#}
+{##}
+{#    <link rel="stylesheet" href="{% static 'shwekd/js/materialize.js' %}">#}
+{#</head>#}
+{% block main %}
+<body>
+
+<h2 class ="waves-light" style="background-color: rgba(255,222,173,0.8); margin-left: 400px; color: black" >Under Construction.<br> Click <a href="/" style="color: red"><strong>HOME</strong></a> To Start Over.</h2>
+
+    <!-- Floating Action Button -->
+                   <div class="fixed-action-btn" style="top: 90px; right: 15px;">
+                       <a class="btn-floating btn-large red">
+                         <i class="large mdi-action-language"></i>
+                       </a>
+                       <ul>
+                           <li><a href="/ca_engg/team/" class="btn-floating pink tooltipped" data-position="left" data-delay="50" data-tooltip="TEAM"><i class="large mdi-social-group"></i></a></li>
+                            <li><a href="/ca_engg/careers/" class="btn-floating pink tooltipped" data-position="left" data-delay="50" data-tooltip="CAREER"><i class="large mdi-social-person-outline"></i></a></li>
+                            <li><a href="/ca_engg/training/" class="btn-floating orange tooltipped" data-position="left" data-delay="50" data-tooltip="TRAINING"><i class="large mdi-hardware-laptop-chromebook"></i></a></li>
+                           <li><a href="/ca_engg/gallery/" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="GALLERY"><i class="large mdi-image-collections"></i></a></li>
+                         <li><a href="/ca_engg/live_projects/" class="btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="LIVE PROJECTS"><i class="large mdi-editor-insert-invitation"></i></a></li>
+                                     <li><a href="/ca_engg/our_niche/" class="btn-floating pink tooltipped" data-position="left" data-delay="50" data-tooltip="OUR NICHE"><i class="large mdi-image-center-focus-strong"></i></a></li>
+       <li><a href="http://www.consultadd.com" target="_blank" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="ABOUT US"><i class="large mdi-action-account-balance-wallet"></i></a></li>
+                       </ul>
+                   </div>
+                   <!-- Floating Action Button -->
+
+</body>
+{% endblock %}
+{#</html>#}

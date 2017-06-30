@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>USER PROFILE</title>
+
+
+    <link rel="stylesheet" href="{% static 'crm_app/css/materialize.css' %}">
+
+    <link rel="stylesheet" href="{% static 'crm_app/css/materialize.min.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'crm_app/js/materialize.min.js' %}">
+
+    <link rel="stylesheet" href="{% static 'crm_app/js/materialize.js' %}">
+</head>
+<body>
+
+<h2 class="waves-light" style="background-color: lightseagreen; margin-left: 750px">USER PROFILE</h2>
+<br>
+
+<div style="height: 30px; width: 300px; margin-left: 800px">
+    <div>
+        <form action="{% url "profile_image_upload" %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            {#                <form method="post" action="/fmar/profile/">{% csrf_token %}#}
+            {#                    {% for field in form %}#}
+            {##}
+            {#            <h2 style="color:black;background-color: yellow">{{ field.label }}</h2>#}
+            {#                        {{ field }}<br>#}
+            {##}
+            {##}
+            {#                    {% endfor %}#}
+            <br><input class="btn waves-effect waves-light" type="submit" value="GO"><i
+                class="material-icons right"></i>
+        </form>
+    </div>
+</div>
+</body>
+</html>

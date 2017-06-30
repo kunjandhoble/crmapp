@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>GM</title>
+
+    <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+  <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
+  <title>Login Page | Materialize - Material Design Admin Template</title>
+
+  <!-- Favicons-->
+  <link rel="icon" href="{%  static "crm_app/images/favicon/favicon-32x32.png" %}" sizes="32x32">
+  <!-- Favicons-->
+  <link rel="apple-touch-icon-precomposed" href="{%  static "crm_app/images/favicon/apple-touch-icon-152x152.png" %}">
+  <!-- For iPhone -->
+  <meta name="msapplication-TileColor" content="#00bcd4">
+  <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+  <!-- For Windows Phone -->
+
+
+  <!-- CORE CSS-->
+
+  <link href="{%  static "crm_app/css/materialize.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="{%  static "crm_app/css/style.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- Custome CSS-->
+    <link href="{%  static "crm_app/css/custom-style.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
+  <!-- CSS for full screen (Layout-2)-->
+  <link href="{%  static "crm_app/css/style-fullscreen.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
+{#  <link href="{%  static "crm_app/css/page-center.css" %}" type="text/css" rel="stylesheet" media="screen,projection">#}
+
+  <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+  <link href="{%  static "crm_app/css/prism.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="{%  static "crm_app/js/plugins/perfect-scrollbar/perfect-scrollbar.css" %}" type="text/css" rel="stylesheet" media="screen,projection">
+ <script type="text/javascript" src="{% static "crm_app/js/jquery-1.11.2.min.js" %}"></script>
+    <!--materialize js-->
+    <script type="text/javascript" src="{% static "crm_app/js/materialize.js" %}"></script>
+    <!--scrollbar-->
+    <script type="text/javascript" src="{% static "crm_app/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js" %}"></script>
+
+
+    <!-- chartist -->
+    <script type="text/javascript" src="{% static "crm_app/js/plugins/chartist-js/chartist.min.js" %}"></script>
+
+    <!-- chartjs -->
+    <script type="text/javascript" src="{% static "crm_app/js/plugins/chartjs/chart.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "crm_app/js/plugins/chartjs/chart-script.js" %}"></script>
+
+    <!-- sparkline -->
+    <script type="text/javascript" src="{% static "crm_app/js/plugins/sparkline/jquery.sparkline.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "crm_app/js/plugins/sparkline/sparkline-script.js" %}"></script>
+
+    <!-- google map api -->
+{#    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAZnaZBXLqNBRXjd-82km_NO7GUItyKek"></script>#}
+
+    <!--jvectormap-->
+    <script type="text/javascript" src="{% static "crm_app/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "crm_app/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" %}"></script>
+    <script type="text/javascript" src="{% static "crm_app/js/plugins/jvectormap/vectormap-script.js" %}"></script>
+
+
+    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="{% static "crm_app/js/plugins.js" %}"></script>
+{#     <script type="text/javascript">#}
+{#        // Toast Notification#}
+{#        $(window).load(function () {#}
+{#            setTimeout(function () {#}
+{#                Materialize.toast('<span>Hiya! I am a toast.</span>', 1500);#}
+{#            }, 1500);#}
+{#            setTimeout(function () {#}
+{#                Materialize.toast('<span>You can swipe me too!</span>', 3000);#}
+{#            }, 5000);#}
+{#            setTimeout(function () {#}
+{#                Materialize.toast('<span>You have new order.</span><a class="btn-flat yellow-text" href="index.html#">Read<a>', 3000);#}
+{#            }, 15000);#}
+{#        });#}
+{##}
+{##}
+{#    </script>#}
+
+    <style>
+        #id_id_field{
+
+            width: 600px;
+            height: 50px;
+            background-color: navajowhite;
+{#            opacity: .7;#}
+
+        }
+
+        #id_pass_field{
+
+            width: 600px;
+            height: 50px;
+
+            background-color: powderblue;
+
+
+        }
+
+
+
+
+    </style>
+</head>
+
+
+
+
+<body class="black">
+ <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+ <header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="cyan">
+                <div class="nav-wrapper">
+
+                    <ul class="left">
+{#                      <li class="no-hover"><a href="index.html#" data-activates="slide-out" class="menu-sidebar-collapse btn-floating btn-flat btn-medium waves-effect waves-light cyan"><i class="mdi-navigation-menu" ></i></a></li>#}
+                      <li><img src="{%  static "crm_app/images/my.png" %}" alt="Smiley face" height="60" width="68"></li>
+                        <li style="margin-right: 500px;font-family:Verdana;font-size: xx-large"><strong>MAJESTIC MAIL</strong></li>
+                        <li><a href="/getmail/logout/"><h6 style="margin: 1.3rem;margin-top: 25px"> LOGOUT </h6></a></li>
+                                <li><a href="/getmail/results/"><h6 style="margin: 1.3rem;margin-top: 25px"> MY FILTER</h6></a></li>
+                                <li><a href="/getmail/global_results/"><h6 style="margin: 1.3rem;margin-top: 25px"> GLOBAL FILTER</h6></a></li>
+
+{#                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light"><i class="mdi-navigation-apps"></i></a>#}
+{#                        </li>#}
+                    </ul>
+                    <!--<div class="header-search-wrapper hide-on-med-and-down">
+                        <i class="mdi-action-search"></i>
+                        <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Materialize"/>
+                    </div>-->
+{#                    <ul class="right hide-on-med-and-down">#}
+{#                        <!--<li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>#}
+{#                        </li>-->#}
+{#                          <li><a href="/getmail/logout/"><h6> LOGOUT </h6></a></li>#}
+{#                                <li><a href="/getmail/add_ids/"><h6> EDIT CRED</h6></a></li>#}
+{#                        <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light"><i class="mdi-navigation-apps"></i></a>#}
+{#                        </li>#}
+{#                        <!--<li><a href="javascript:void(0);" class="waves-effect waves-block waves-light"><i class="mdi-social-notifications"></i></a>#}
+{#                        </li>-->#}
+{#                        <li><a href="index.html#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse"><i class="mdi-communication-chat"></i></a>#}
+{#                        </li>#}
+{#                    </ul>#}
+                </div>
+            </nav>
+        </div>
+ </header>
+  <!-- Start Page Loading -->
+{#  <div id="loader-wrapper">#}
+{#      <div id="loader"></div>        #}
+{#      <div class="loader-section section-left"></div>#}
+{#      <div class="loader-section section-right"></div>#}
+{#  </div>#}
+  <!-- End Page Loading -->
+
+
+
+  <div id="login-page" class="row">
+    <div class="col s12 z-depth-4 card-panel">
+      <form class="login-form" method="post" action="/getmail/add_ids/">{% csrf_token %}
+        <div class="row">
+          <div class="input-field col s12 center">
+            <h4>ADD Ids used for Marketting</h4>
+            <p class="center">Join to our community now !</p>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+           {{ form.id_field }}
+            <label for="username" class="center-align">E-mail Id's</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12" style="">
+            <i class="mdi-action-lock-outline prefix"></i>
+             {{ form.pass_field }}
+            <label for="email" class="center-align">Password$</label>
+          </div>
+        </div>
+{#        <div class="row margin">#}
+{#          <div class="input-field col s12">#}
+{#            <i class="mdi-action-lock-outline prefix"></i>#}
+{#             {{ form.password1 }}#}
+{#            <label for="password">Password</label>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="row margin">#}
+{#          <div class="input-field col s12">#}
+{#            <i class="mdi-action-lock-outline prefix"></i>#}
+{#             {{ form.password2 }}#}
+{#            <label for="password-again">Password again</label>#}
+{#          </div>#}
+{#        </div>#}
+        <div class="row">
+          <div class="input-field col s12">
+           <input type="submit" value="Save">
+          </div>
+{#          <div class="input-field col s12">#}
+{#            <p class="margin center medium-small sign-up">Already have an account? <a href="/getmail/logout/">Logout</a></p>#}
+{#          </div>#}
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</body>
+</html>

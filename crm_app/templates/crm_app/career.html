@@ -1,0 +1,149 @@
+{% extends "crm_app/base.html" %}
+{% load staticfiles %}
+{#<html>#}
+{#<head lang="en">#}
+{#    <meta charset="UTF-8">#}
+{#    <title>LOGOUT</title>#}
+{##}
+{#    <link rel="stylesheet" href="{% static 'shwekd/css/materialize.css' %}">#}
+{##}
+{#    <link rel="stylesheet" href="{% static 'shwekd/css/materialize.min.css' %}">#}
+{##}
+{##}
+{#    <link rel="stylesheet" href="{% static 'shwekd/js/materialize.min.js' %}">#}
+{##}
+{#    <link rel="stylesheet" href="{% static 'shwekd/js/materialize.js' %}">#}
+{#</head>#}
+{% block main %}
+    <body>
+    {#{% block global_link %}#}
+<br>
+    <br><br>
+    <h4 style="color: white;margin-left: 400px"><i><strong>CAREERS</strong></i></h4>
+
+
+    <ul style="margin-left: 450px">
+
+        <li><i class="material-icons" style="color: white">description</i><a class="modal-trigger waves-effect waves-light btn" href="#BA">Business
+            Analyst, Information Technology</a></li>
+        <br>
+        <li><i class="material-icons" style="color: white">description</i><a class="modal-trigger waves-effect waves-light btn" href="#DA">Data
+            Analyst, Information Technology</a></li>
+        <br>
+
+    </ul>
+
+    <!-- Floating Action Button -->
+                   <div class="fixed-action-btn" style="top: 90px; right: 15px;">
+                       <a class="btn-floating btn-large red">
+                         <i class="large mdi-action-language"></i>
+                       </a>
+                       <ul>
+                           <li><a href="/ca_engg/team/" class="btn-floating pink tooltipped" data-position="left" data-delay="50" data-tooltip="TEAM"><i class="large mdi-social-group"></i></a></li>
+                           <li><a href="/ca_engg/stories/" class="btn-floating red tooltipped" data-position="left" data-delay="50" data-tooltip="SUCCESS STORIES"><i class="large mdi-hardware-security"></i></a></li>
+                         <li><a href="/ca_engg/training/" class="btn-floating orange tooltipped" data-position="left" data-delay="50" data-tooltip="TRAINING"><i class="large mdi-hardware-laptop-chromebook"></i></a></li>
+                           <li><a href="/ca_engg/gallery/" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="GALLERY"><i class="large mdi-image-collections"></i></a></li>
+                         <li><a href="/ca_engg/live_projects/" class="btn-floating green tooltipped" data-position="left" data-delay="50" data-tooltip="LIVE PROJECTS"><i class="large mdi-editor-insert-invitation"></i></a></li>
+                                     <li><a href="/ca_engg/our_niche/" class="btn-floating pink tooltipped" data-position="left" data-delay="50" data-tooltip="OUR NICHE"><i class="large mdi-image-center-focus-strong"></i></a></li>
+       <li><a href="http://www.consultadd.com" target="_blank" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="ABOUT US"><i class="large mdi-action-account-balance-wallet"></i></a></li>
+                       </ul>
+                   </div>
+                   <!-- Floating Action Button -->
+
+    <!-- Modal Structure -->
+
+
+    <div id="DA" class="modal modal-fixed-footer">
+        <div class="modal-content" style="background-color:navajowhite; opacity: .9">
+            <h4 style="color: teal;font-family: Baskerville;margin-left: 190px">DATA ANALYST<br>Information
+                Technology</h4><br>
+
+            <b style="color: black">Key Responsibilities</b><br>
+            <p style="color: black">Team is very skilled and the typical deliverables are -</p>
+            <ul style="color: black;margin-left: 20px">
+                <li>● Writing complex SQL queries</li>
+                <li>● Clear understanding of Logical/Physical Data Modeling, Relational and Dimensional Modeling for
+                    Online Transaction Processing (OLTP) and Online Analytical Processing (OLAP) systems.
+                </li>
+                <li>● Knowledge in the ETL (Extract, Transform and Load) of data into a data ware house/date mart</li>
+                <li>● Basics of Business Intelligence, MDM, Data governance</li>
+            </ul>
+
+            <b style="color: black">Requirements</b><br>
+            <ul style="color: black;margin-left: 20px">
+                <li>● Bachelor Degree in IT with 6 months industry experience in generating SQL queries would be an
+                    added advantage.
+                </li>
+
+            </ul>
+            <b style="color: black">Tools</b><br>
+            <ul style="color: black;margin-left: 20px">
+
+                <li>● Knowledge of any one relational database is a must e.g. - (MySQL, SQL Server, Oracle etc.)</li>
+                <li>● VBA macros</li>
+            </ul>
+
+            <b style="color: black">Additional Skills would be an advantage</b>
+            <ul style="color: black;margin-left: 20px">
+                <li>● Basic knowledge of data visualization technologies, such as Tableau</li>
+                <li>● Basic knowledge of ETL tools (SSIS/SSRS)</li>
+                <li>● Business Intelligence (BI) tools like SAP Business Objects Modules (Reporter, Supervisor,
+                    Designer, and Web Intelligence)
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="modal-header" style="float: right">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat "><i
+                    class="material-icons right">close</i></a>
+        </div>
+        <div class="modal-footer"  style="background-color: darkred; opacity: .2;height: 5%">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">CLOSE</a>
+
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="BA" class="modal modal-fixed-footer">
+        <div class="modal-content" style="background-color:navajowhite; opacity: .9">
+            <h4 style="color: teal;font-family: Baskerville;margin-left: 180px">BUSINESS ANALYST Information
+                Technology</h4><br>
+
+            <b style="color: black">Key Responsibilities</b><br>
+            <ul style="color: black;margin-left: 20px">
+                <li>● Understand business requirement, analysis the requirements, prioritize the requirements</li>
+                <li>● Strong documentation skills – Preparation of BRD, FRD, UML diagrams, Knowledge of BPMN processes
+                </li>
+                <li>● Strong SDLC understanding, Knowledge of Agile and scrum methodology</li>
+                <li>● Screen Mockups - Wireframes</li>
+                <li>● QA - Knowledge of UAT preparation, prepare test plan, test cases, RTM</li>
+            </ul>
+
+            <b style="color: black">Requirements</b><br>
+            <ul style="color: black;margin-left: 20px">
+                <li>● Bachelor Degree in IT with 6 months industry exp.</li>
+                <li>● Analytical, independent, service-oriented and possess good communication and skills.</li>
+                <li>● Willing to adapt to changing domains.</li>
+
+            </ul>
+            <b style="color: black">Preferred Tools</b><br>
+            <ul style="color: black;margin-left: 20px">
+
+                <li>Microsoft Visio, Excel macros, ALM, Basics of SQL</li>
+            </ul>
+
+        </div>
+                <div class="modal-header" style="float: right">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat "><i
+                    class="material-icons right">close</i></a>
+        </div>
+        <div class="modal-footer" style="background-color: darkred; opacity: .2;height: 5%">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">CLOSE</a>
+
+        </div>
+    </div>
+
+    </body>
+{% endblock %}
+{#</html>#}

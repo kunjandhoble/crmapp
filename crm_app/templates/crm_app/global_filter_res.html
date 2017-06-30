@@ -1,0 +1,423 @@
+{#<div>#}
+{#    <form action="/getmail/results/" method="post">{% csrf_token %}#}
+{#        <div class="row">#}
+{#    <div class="col s4"><br>#}
+{#        <input id="state_name" name="state" type="text" placeholder="Enter State">#}
+{#    </div>#}
+{#    <div class="col s4"><br>#}
+{#            <input class="btn waves-effect waves-light" id="click" name="btn" type="submit" value="# FILTER" style="margin-left: 40px">#}
+{#    </div>#}
+{#</div>#}
+{##}
+{##}
+{#    </form>#}
+{#    {% if size != 0 %}#}
+{#<div class="row">#}
+{#<div class="col s4 m2">#}
+{#        <a href="/getmail/logout/"><h4> LOGOUT </h4></a>#}
+{#        <a href="/getmail/add_ids/"><h4> edit cred </h4></a>#}
+{#</div>#}
+{#</div>#}
+{##}
+{#        {% for k in res_header %}#}
+{##}
+{#            <a href="#" class="tooltip">SENDER: {{ res_sender|index:forloop.counter0 }}     SUBJECT: {{ k }}<br><br>#}
+{##}
+{#    <span>#}
+{#        <img class="callout" src="cssttp/callout_black.gif" />#}
+{#          <strong>BODY : </strong><br/>#}
+{#        {{ res_msg|index:forloop.counter0 }}#}
+{##}
+{#    </span>#}
+{#            </a>#}
+{#        <div id={{ forloop.counter }}><h4 style="color: dodgerblue">{{ k }}</h4></div>#}
+{#        {% endfor %}#}
+{##}
+{#    {% else %}#}
+{#        <h2>SORRY.. Try with different location...</h2>#}
+{#<div class="row">#}
+{#<div class="col s4 m2">#}
+{#        <a href="/getmail/logout/"><h4> LOGOUT </h4></a>#}
+{#                <a href="/getmail/add_ids/"><h4> edit cred </h4></a>#}
+{#</div>#}
+{#</div>#}
+{##}
+{#    {% endif %}#}
+{##}
+{#</div>#}
+{##}
+
+
+{% extends "crm_app/base.html" %}
+{% load tags %}
+{% load staticfiles %}
+
+<head>
+    <style>
+        a.tooltip {
+            outline: none;
+        }
+
+        a.tooltip strong {
+            line-height: 30px;
+        }
+
+        a.tooltip:hover {
+            text-decoration: none;
+        }
+
+        a.tooltip span {
+            z-index: 10;
+            display: none;
+            padding: 14px 20px;
+            margin-top: 60px;
+            margin-left: -160px;
+            width: 300px;
+            line-height: 16px;
+        }
+
+        a.tooltip:hover span {
+            display: inline;
+            position: absolute;
+            border: 2px solid #FFF;
+            color: #EEE;
+            background: black;
+        }
+
+        .callout {
+            z-index: 20;
+            position: absolute;
+            border: 0;
+            top: -14px;
+            left: 120px;
+        }
+
+        /*CSS3 extras*/
+        a.tooltip span {
+            border-radius: 2px;
+            box-shadow: 0px 0px 8px 4px #666;
+            /*opacity: 0.8;*/
+        }
+#main {
+    background-image: url("{% static "crm_app/images/sl2.jpg"%}");
+}
+
+
+    </style>
+
+</head>
+<body>
+{% block global_link %}
+                                    <li><a href="/getmail/results/"><h6 style="margin: 1.3rem;margin-top: 25px"> MY FILTER</h6></a></li>
+{% endblock %}
+
+
+{% block main %}
+
+
+
+    <!--First tooltip-->
+    {#<a href="#" class="tooltip">#}
+    {#    {{ k }}#}
+    {#    <span>#}
+    {#        <img class="callout" src="cssttp/callout_black.gif" />#}
+    {#        <strong>Most Light-weight Tooltip</strong><br />#}
+    {#        {{ k }}#}
+    {#    </span>#}
+    {#</a>#}
+    {##}
+    {#<!--Second tooltip-->#}
+    {#<a href="#" class="tooltip">#}
+    {#    <img src="/tooltip/css-tooltip-image.gif" />#}
+    {#    <span>#}
+    {#        <img class="callout" src="cssttp/callout_black.gif" />#}
+    {#        <img src="/tooltip/src/tooltips-cd2.jpg" style="float:right;" />#}
+    {#        <strong>CSS only Tooltip</strong><br />#}
+    {#        Pure CSS popup tooltips with clean semantic XHTML.#}
+    {#    </span>#}
+    {#</a>#}
+    {#--------------------------------------------------suhas modification---------------------------------------------------#}
+    <!-- START MAIN -->
+    <div id="main">
+        <!-- START WRAPPER -->
+        <div class="wrapper">
+            <div class="row">
+                <div class="col s12 m12 l3">
+                    <ul id="task-card" class="collection with-header">
+                        <li class="collection-header cyan">
+                            <h4 class="task-card-title">User-Name</h4>
+
+                            <p class="task-card-date">Official ID</p>
+
+
+                        </li>
+                        <li class="collection-item dismissable">
+
+                            <h6>Hi Username</h6> <a href="index.html#" class="secondary-content"></a>
+
+
+                        </li>
+                        <li class="no-padding">
+                            <ul class="collapsible collapsible-accordion">
+                                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i
+                                        class="mdi-action-invert-colors"></i> List OF ID's</a>
+
+                                    <div class="collapsible-body">
+                                        <ul>
+                                            <li><a href="">id1</a>
+                                            </li>
+                                            <li><a href="">Id2</a>
+                                            </li>
+                                            <li><a href="">id3</a>
+                                            </li>
+                                            <li><a href="">id4</a>
+                                            </li>
+                                            <li><a href="">id5</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+
+
+                                    {#                                <li class="no-padding">#}
+                                    {#                                    <ul class="collapsible collapsible-accordion">#}
+                                    {#                                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i#}
+                                    {#                                                class="mdi-action-invert-colors"></i> List OF ID's</a>#}
+                                    {##}
+                                    {#                                            <div class="collapsible-body">#}
+                                    {#                                                <ul>#}
+                                    {#                                                    <li><a href="">id1</a>#}
+                                    {#                                                    </li>#}
+                                    {#                                                    <li><a href="">Id2</a>#}
+                                    {#                                                    </li>#}
+                                    {#                                                    <li><a href="">id3</a>#}
+                                    {#                                                    </li>#}
+                                    {#                                                    <li><a href="">id4</a>#}
+                                    {#                                                    </li>#}
+                                    {#                                                    <li><a href="">id5</a>#}
+                                    {#                                                    </li>#}
+                                    {##}
+                                    {#                                                </ul>#}
+                                    {#                                            </div>#}
+                                    {#                                        </li>#}
+                                    {#                                        </li>#}
+                                <li>
+
+                                <li class="li-hover">
+                                    <div class="divider"></div>
+                                </li>
+                                <li class="li-hover"><p class="ultra-small margin more-text">Statistics</p>
+                                </li>
+                                <li class="li-hover">
+                                    <div class="row">
+                                        <div class="col s12 m12 l12">
+                                            <div class="card">
+                                                <div class="card-content  teal darken-2">
+
+                                                    <div class="line-chart-wrapper">
+                                                        <p class="margin white-text">Statistics</p>
+                                                        <canvas id="line-chart" height="114"></canvas>
+                                                    </div>
+                                                </div>
+                                                <div class="card-reveal">
+                                                            <span class="card-title grey-text text-darken-4">Statistics<i
+                                                                    class="mdi-navigation-close right"></i></span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                            </ul>
+                    </ul>
+                </div>
+
+
+                <form class="col s12 m9 l6" action="/getmail/results/" method="post">{% csrf_token %}
+
+                    <div class="row">
+                        <div class="col s6"><br>
+                            <input id="state_name" name="state" type="text" placeholder="Enter State">
+                        </div>
+                        <div class="col s4"><br>
+                            <button class="btn cyan waves-effect waves-light" type="submit" name="action">
+                                <i class="mdi-communication-email prefix"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+                </form>
+
+
+                <div class="col s12 m9 l9">
+                    <ul id="task-card" class="collection with-header">
+                        <li class="collection-header cyan">
+                            <h4 class="task-card-title">RESULTS</h4>
+
+                            <p class="task-card-date">As per ID's ID</p>
+                        </li>
+
+
+
+
+
+                        {% if size != 0 %}
+
+
+                            {% for k in res_header %}
+                                <li class="collection-item" style="border: 2px solid deepskyblue">
+                                    {#                                    <div class="row">#}
+                                    {#                                        <div class="col s6">#}
+                                    <div class="row">
+                                        <div class="col s12 m10">
+                                            <div class="card-panel orange" style="opacity: 0.7">
+{#                                                <h6><strong>SENDER:-</strong>{{ res_sender|index:forloop.counter0 }}#}
+{#                                                </h6>#}
+                                                <h6><strong>SUBJECT:-</strong>{{ k }}</h6>
+                                                <h6><strong>DATE:-</strong>{{ res_date|index:forloop.counter0 }}</h6>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+{#                                        <div class="col s12 m10">#}
+{#                                            <div class="card-panel orange" style="opacity: 0.7">#}
+{#                                                <h6><strong>BODY:</strong></h6>#}
+{#                                                {{ res_msg|index:forloop.counter0 }}#}
+{#                                            </div>#}
+{#                                        </div>#}
+                                        <div class="col s12 m2">
+                                            <span class="task-cat cyan">VIEW EM</span>
+                                        </div>
+                                    </div>
+                                    {##}
+                                    {#                                            <p class="collections-content">E_ID_1_date</p>#}
+                                    {#                                        </div>#}
+                                    {#                                        <div class="col s12 m2">#}
+                                    {#                                            <span class="task-cat cyan">VIEW EM</span>#}
+                                    {#                                        </div>#}
+                                    {#                                        <div class="col s3">#}
+                                    {#                                            <div id="project-line-1"></div>#}
+                                    {#                                        </div>#}
+                                    {#                                    </div>#}
+                                    {##}
+                                    {#                                    <a href="#" class="tooltip">{{ k }}<br><br>#}
+                                    {#                                        {{ abcd }}#}
+                                    {##}
+                                    {#                                        <span>#}
+                                    {#        <img class="callout" src="cssttp/callout_black.gif" />#}
+                                    {#        <strong>BODY : </strong><br/>#}
+                                    {#        {{ res_msg|index:forloop.counter0 }}#}
+                                    {#    </span>#}
+                                    {#                                    </a>#}
+                                    {#        <div id={{ forloop.counter }}><h4 style="color: dodgerblue">{{ k }}</h4></div>#}
+
+
+                                </li>
+                            {% endfor %}
+
+                        {% else %}
+                            <li class="collection-item">
+                                <div class="row">
+                                    <div class="col s6">
+                                        {#                                        <p class="collections-title">E_ID_1</p>#}
+                                        {##}
+                                        {#                                        <p class="collections-content">E_ID_1_date</p>#}
+                                    </div>
+                                    <div class="col s3">
+                                        <span class="task-cat cyan">VIEW EM</span>
+                                    </div>
+                                    <div class="col s3">
+                                        <div id="project-line-1"></div>
+                                    </div>
+                                </div>
+                                {#                            {% if size != 0 %}#}
+                                {##}
+                                {##}
+                                {#                                {% for k in res_header %}#}
+                                {#                                    <a href="#" class="tooltip">{{ k }}<br><br>#}
+                                {#                                    {{ abcd }}#}
+                                {##}
+                                {#                                        <span>#}
+                                {#        <img class="callout" src="cssttp/callout_black.gif" />#}
+                                {#        <strong>BODY : </strong><br/>#}
+                                {#        {{ res_msg|index:forloop.counter0 }}#}
+                                {#    </span>#}
+                                {#                                    </a>#}
+                                {#        <div id={{ forloop.counter }}><h4 style="color: dodgerblue">{{ k }}</h4></div>#}
+                                {#                                {% endfor %}#}
+
+
+                                <h6>SORRY.. Try with different location...</h6>
+                                {% for i in abcd %}
+                                    {{ i }}
+                                {% endfor %}
+
+
+                            </li>
+                        {% endif %}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="page-footer">
+
+
+        {#        <div class="container">#}
+        {#            <div class="row">#}
+        {#                <div class="col l6 s12">#}
+        {#                    <h5 class="white-text">World Market</h5>#}
+        {##}
+        {#                    <p class="grey-text text-lighten-4">World map, world regions, countries and cities.</p>#}
+        {##}
+        {#                    <div id="world-map-markers"></div>#}
+        {#                </div>#}
+        {#                <div class="col l4 offset-l2 s12">#}
+        {#                    <h5 class="white-text">Sales by Country</h5>#}
+        {##}
+        {#                    <p class="grey-text text-lighten-4">A sample polar chart to show sales by country.</p>#}
+        {##}
+        {#                    <div id="polar-chart-holder">#}
+        {#                        <canvas id="polar-chart-country" width="200"></canvas>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </div>#}
+        {#        <div class="footer-copyright">#}
+        {#            <div class="container">#}
+        {#                Copyright © 2015 <a class="grey-text text-lighten-4"#}
+        {#                                    href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs"#}
+        {#                                    target="_blank">GeeksLabs</a> All rights reserved.#}
+        {#                <span class="right"> Design and Developed by <a class="grey-text text-lighten-4"#}
+        {#                                                                href="http://geekslabs.com/">GeeksLabs</a></span>#}
+        {#            </div>#}
+        {#        </div>#}
+    </footer>
+    <!-- END FOOTER -->
+
+
+    <!-- ================================================
+    Scripts
+    ================================================ -->
+
+    <!-- jQuery Library -->
+    <!-- jQuery Library -->
+
+
+
+
+
+    {#----------------------------------------------------end modification---------------------------------------------------#}
+
+</body>
+{% endblock %}

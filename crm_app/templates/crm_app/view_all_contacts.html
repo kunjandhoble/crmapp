@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View All Contacts</title>
+</head>
+<body>
+<h3>have fun</h3>
+{% if msg %}
+    <ul class="messages">
+        {% for message in msg %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<br>
+<b>CONTACTS LIST:</b><br>
+{% for i in all_contacts %}
+    <pre>
+    <a href="{% url 'view_account' company_name=i.account_company_name %}"><span><t><b>{{ i.account_company_name }}</b></t></span></a>
+    <a href="{% url 'view_contact' company_name=i.account_company_name id=i.id %}"><span><t><b>{{ i.name }}</b></t></span></a>
+    <br>
+    </pre>
+{% endfor %}
+<br>
+</body>
+</html>

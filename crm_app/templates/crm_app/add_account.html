@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h3>have fun</h3>
+{% if msg %}
+<ul class="messages">
+    {% for message in msg %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+      <form class="login-form" method="post" action="/crmbasic/addaccount/">{% csrf_token %}
+{{ form.as_p }}
+          <input type="submit" value="ADD ACCOUNT">
+      </form>
+</body>
+</html>

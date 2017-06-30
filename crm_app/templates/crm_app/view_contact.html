@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Contact</title>
+</head>
+<body>
+<h3>have fun</h3>
+{% if msg %}
+    <ul class="messages">
+        {% for message in msg %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<br>
+<b>CONTACT INFO:</b><br>
+{% for i in contact_info %}
+    <pre>
+        <span><t><i>{{ i.name }}</i></t></span><br>
+        <span><t><i>{{ i.email }}</i></t></span><br>
+        <a href="{% url 'view_account' company_name=i.account_company_name %}"><span><t><b>{{ i.account_company_name }}</b></t></span></a><br>
+        <span><t><i>{{ i.phone }}</i></t></span><br>
+        <span><t><i>{{ i.notes }}</i></t></span><br>
+        <br>
+    </pre>
+{% endfor %}
+<br>
+<b>MEETING LIST:</b><br>
+{% for i in meeting_info %}
+    <pre>
+    <a href="{% url 'view_meeting' company_name=i.account_company_name %}"><span><t><i>{{ i.notes }} ({{ i.date }})</i></t></span></a>
+    </pre>
+{% endfor %}
+<br>
+</body>
+</html>
