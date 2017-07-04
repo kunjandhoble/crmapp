@@ -9,22 +9,22 @@ from django.shortcuts import render
 from rest_framework.generics import (
     ListAPIView,
     RetrieveAPIView
-    )
+)
 
 from crm_app.models import Meeting
 from .serializers import (
-    ListAllMeetingsSerializer,
-    DetailMeetingSerializer
-    )
+    ListMeetingsSerializer
+)
 
 
 class ViewAllMeetingsListAPIView(ListAPIView):
     # account_company_name = serializers.SerializerMethodField()
     queryset = Meeting.objects.all().order_by('date')[::-1]
-    serializer_class = ListAllMeetingsSerializer
+    serializer_class = ListMeetingsSerializer
 
 
 class ViewMeetingDetailAPIView(RetrieveAPIView):
     # queryset = Meeting.objects.filter(account_company_name__company_name=company_name)
+    # TO DO: queryset to extract data and serialize it using company name.
     queryset = Meeting.objects.all()
-    serializer_class = DetailMeetingSerializer
+    serializer_class = ListMeetingsSerializer
