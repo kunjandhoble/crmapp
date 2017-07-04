@@ -21,6 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^crmbasic/', include('crm_app.urls'), name='crm_app'),
     url(r'^accounts/login/$', auth_views.login,{'template_name':'crm_app/login.html'}, name='login'),
-    url(r'^crm_api/', include('crm_api.urls'), name='crm_api'),
+    url(r'^crmapi/', include('crm_api.urls'), name='crm_api'),
 
 ]
