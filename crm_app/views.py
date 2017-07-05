@@ -198,11 +198,11 @@ def view_all_contacts(request):
     raise Http404
 
 
-def view_contact(request, company_name, id):
+def view_contact(request, company_name, contact_id):
     args = {}
     if request.method == 'GET':
-        contact_info = Contact.objects.filter(account_company_name__company_name=company_name, id=id)
-        meeting_info  = Meeting.objects.filter(account_company_name__company_name=company_name, contact_id=id)
+        contact_info = Contact.objects.filter(account_company_name__company_name=company_name, id=contact_id)
+        meeting_info  = Meeting.objects.filter(account_company_name__company_name=company_name, contact_id=contact_id)
         args['contact_info'] = contact_info
         args['meeting_info'] = meeting_info
         return render_to_response('crm_app/view_contact.html', args, RequestContext(request))
