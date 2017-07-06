@@ -1,17 +1,41 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.http import Http404
-from rest_framework import viewsets
-from django.shortcuts import render
-
 # Create your views here.
 from rest_framework.generics import (
     ListAPIView,
-    RetrieveAPIView
-)
+    RetrieveAPIView,
+    CreateAPIView)
 
-from .serializers import *
+from crm_app.models import Account, Contact, Project, Meeting
+from .serializers import (AddAccountSerializer, AddContactSerializer, AddProjectSerializer, AddMeetingSerializer,
+                          ListAllMeetingsSerializer, DetailMeetingSerializer, ListAllAccountsSerializer,
+                          DetailAccountSerializer, ListAllContactsSerializer, DetailContactSerializer,
+                          ListAllProjectsSerializer, DetailProjectSerializer)
+
+
+class AddAccountAPIView(CreateAPIView):
+    # account_company_name = serializers.SerializerMethodField()
+    queryset = Account.objects.all()
+    serializer_class = AddAccountSerializer
+
+
+class AddContactAPIView(CreateAPIView):
+    # account_company_name = serializers.SerializerMethodField()
+    queryset = Contact.objects.all()
+    serializer_class = AddContactSerializer
+
+
+class AddProjectAPIView(CreateAPIView):
+    # account_company_name = serializers.SerializerMethodField()
+    queryset = Project.objects.all()
+    serializer_class = AddProjectSerializer
+
+
+class AddMeetingAPIView(CreateAPIView):
+    # account_company_name = serializers.SerializerMethodField()
+    queryset = Meeting.objects.all()
+    serializer_class = AddMeetingSerializer
 
 
 class ViewAllMeetingsListAPIView(ListAPIView):
@@ -38,7 +62,7 @@ class ViewMeetingDetailAPIView(ListAPIView):
     # lookup_field = 'account_company_name'
     # lookup_url_kwarg = 'company_name'
 
-    def get_queryset(self, *args, **kwargs):
+    def get_queryset(self, **kwargs):
         # print(self.args)
         # print(self.kwargs['company_name'])
         if self.kwargs.get('meeting_id', None):
@@ -77,7 +101,7 @@ class ViewContactDetailAPIView(ListAPIView):
     # lookup_field = 'id'
     # lookup_url_kwarg = 'contact_id'
 
-    def get_queryset(self, *args, **kwargs):
+    def get_queryset(self, **kwargs):
         # print(self.args)
         # print(self.kwargs['company_name'])
         if self.kwargs.get('contact_id', None):
@@ -97,7 +121,7 @@ class ViewAllProjectsListAPIView(ListAPIView):
 class ViewProjectDetailAPIView(ListAPIView):
     serializer_class = DetailProjectSerializer
 
-    def get_queryset(self, *args, **kwargs):
+    def get_queryset(self, **kwargs):
         # print(self.args)
         # print(self.kwargs['company_name'])
         if self.kwargs.get('project_name', None):
